@@ -11,7 +11,7 @@
             for (let i = 0; i < 20; i++) {
                 numeros.push(Math.floor(Math.random() * 101)); // Entre 0 y 100
             }
-            document.write("Array sin ordenar:"+ numeros);
+            document.write("Array sin ordenar:"+ numeros+"<br>");
             let numerosHechos = [...new Set(numeros.sort((a, b) => a - b))];
             document.write("Array ordenado y sin duplicados:"+ numerosHechos);
     </script>
