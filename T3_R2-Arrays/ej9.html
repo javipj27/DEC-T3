@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let cadena = prompt("Introduce texto:");
+            let array = cadena.split(/\s+/); 
+            array = array.filter(palabra => palabra.trim() !== "");
+            let numero = array.length;
+            let palabra = array[0] || "No hay palabras";
+            let ultima = array[array.length - 1] || "No hay palabras";
+            let invertida = array.slice().reverse().join(" ");
+            let ordenadasAZ = array.slice().sort().join(", ");
+            let ordenadasZA = array.slice().sort().reverse().join(", ");
+
+            alert(
+                "Numero de palabras: " + numero +
+                "\nPrimera palabra: " + palabra +
+                "\nUltima palabra: " + ultima +
+                "\nPalabras en orden inverso: " + invertida +
+                "\nPalabras ordenadas de la A a la Z: " + ordenadasAZ +
+                "\nPalabras ordenadas de la Z a la A: " + ordenadasZA
+            );
+    </script>
+</body>
+</html>

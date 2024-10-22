@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum metus ac quam cursus, at efficitur mi pellentesque.</p>
+    <p>Phasellus et orci non metus fermentum congue. Suspendisse potenti. Morbi laoreet arcu nec velit dignissim, ac laoreet ante tincidunt.</p>
+    <p>Vivamus ac lectus vitae odio sodales fringilla. Curabitur euismod, justo vel interdum consectetur, massa augue fermentum purus.</p>
+    <p>Integer at magna nec dui auctor volutpat. Sed dictum lorem eu nulla ultrices, a aliquam nunc cursus.</p>
+    <p>Quisque ut sapien nec leo dictum suscipit. Fusce suscipit nibh vitae orci consectetur, nec venenatis nulla placerat.</p>
+
+    <button id="buscarBtn">Buscar Palabra</button>
+
+    <script>
+        document.getElementById("buscarBtn").addEventListener("click", function() {
+            let palabra = prompt("Introduce una palabra a buscar:");
+            let completo = "";
+            const parrafos = document.querySelectorAll("p");
+            parrafos.forEach(parrafo => {
+                completo += parrafo.innerText + " "; 
+            });
+            if (completo.toLowerCase().includes(palabra.toLowerCase())) {
+                alert("La palabra '" + palabra + "' existe en el texto.");
+            } else {
+                alert("La palabra '" + palabra + "' no se encontró en el texto.");
+            }
+        });
+    </script>
+</body>
+</html>

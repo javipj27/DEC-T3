@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeros = []; // Inicializamos un array vacío
+    
+        // Solicitamos 5 números al usuario
+        for (let i = 0; i < 5; i++) {
+            let numero = Number(prompt("Introduce un número: ")); // Convertimos la entrada a número
+            numeros.push(numero); // Añadimos el número al array
+        }
+    
+        // Sumar los valores del array
+        let suma = 0;
+        for (let i = 0; i < numeros.length; i++) {
+            suma += numeros[i];
+        }
+    
+        // Calcular el valor medio
+        let valorMedio = suma / numeros.length;
+    
+        // Mostrar los resultados
+        document.write("El valor minimo del array es: " + Math.min(...numeros) + "<br>");
+        document.write("El valor maximo del array es: " + Math.max(...numeros) + "<br>");
+        document.write("El valor medio del array es: " + valorMedio);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let a1 = ["manzana", "pera", "plátano", "fresa", "uva"];
+            let a2 = ["plátano", "uva", "naranja", "kiwi", "pera"];
+            let interseccion = a1.filter(palabra => a2.includes(palabra));
+            let union = [...new Set([...a1, ...a2])];
+            let diferencia = a1.filter(palabra => !a2.includes(palabra));
+
+            document.write("Intersección:"+ interseccion);
+            document.write("Unión:"+ union);
+            document.write("Diferencia:"+ diferencia);
+    </script>
+</body>
+</html>
