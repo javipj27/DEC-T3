@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        // Ejercicio 1
+        import { numeros, valorFiltro, numerosFiltrados } from './main.js';
+        
+        console.log(`Números originales: ${numeros}`);
+        console.log(`Números filtrados menores que ${valorFiltro}: ${numerosFiltrados}`);
+    
+        // Ejercicio 2
+        import { texto, textoHacker } from './main.js';
+        
+        console.log(`Texto original: ${texto}`);
+        console.log(`Hacker Speak: ${textoHacker}`);
+    
+        // Ejercicio 3
+        import { nombreArchivo, extensionArchivo } from './main.js';
+        
+        console.log(`Nombre del archivo: ${nombreArchivo}`);
+        console.log(`Extensión: ${extensionArchivo}`);
+    
+        // Ejercicio 4
+        import { array2D, arrayAplanado } from './main.js';
+        
+        console.log(`Array 2D original: ${JSON.stringify(array2D)}`);
+        console.log(`Array aplanado: ${JSON.stringify(arrayAplanado)}`);
+    
+        // Ejercicio 5
+        import { arrayConDuplicados, arraySinDuplicados } from './main.js';
+        
+        console.log(`Array con duplicados: ${JSON.stringify(arrayConDuplicados)}`);
+        console.log(`Array sin duplicados: ${JSON.stringify(arraySinDuplicados)}`);
+    
+        // Ejercicio 6
+        import { letra, textos, cantidad } from './main.js';
+        
+        console.log(`Letra a contar: ${letra}`);
+        console.log(`Texto: ${textos}`);
+        console.log(`Cantidad de veces que aparece la letra "${letra}": ${cantidad}`);
+    
+        // Ejercicio 7
+        import { textoOriginal, palabrasAEliminar, textoResultante } from './main.js';
+        
+        console.log(`Texto original: "${textoOriginal}"`);
+        console.log(`Palabras a eliminar: ${JSON.stringify(palabrasAEliminar)}`);
+        console.log(`Texto resultante: "${textoResultante}"`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="ventas" placeholder="Ventas">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            let ventas = document.getElementById('ventas').value;
+            let sueldo = 200 + ventas * 0.09;
+            document.getElementById('resultado').textContent = "Sueldo: ${sueldo.toFixed(2)}€";
+        }
+    </script>
+</body>
+</html>

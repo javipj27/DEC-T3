@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = new Array(10);
+
+        function iniciar() {
+            for (let i = 0; i < array.length; i++) {
+                array[i] = 0;
+            }
+            console.log("Array inicializado a ceros:", array);
+        }
+
+        function incrementar() {
+            for (let i = 0; i < array.length; i++) {
+                array[i] += 1;
+            }
+            console.log("Array después de incrementar en 1:", array);
+        }
+
+        function mostrar() {
+            console.log("Valores del array:", array.join(" "));
+        }
+
+        iniciar(); 
+        incrementar();  
+        mostrar();   
+    </script>
+</body>
+</html>

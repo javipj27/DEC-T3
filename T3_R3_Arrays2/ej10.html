@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Reserva tu Asiento</h1>
+    <label for="clase">Clase:</label>
+    <select id="clase">
+        <option value="first">First</option>
+        <option value="turista">Turista</option>
+    </select>
+    <button onclick="reservarAsiento()">Reservar</button>
+    <div id="resultado"></div>
+    <script>
+        function reservarAsiento() {
+            let clase = document.getElementById('clase').value;
+            let asientos = new Array(10).fill(false); // Crea un array de 10 elementos, todos inicializados a false
+            let asientoLibre = -1;
+            for (let i = inicioClase; i < asientos.length; i++) {
+                if (!asientos[i]) {
+                asientoLibre = i;
+            break;
+                }
+            }
+
+            if (asientoLibre !== -1) {
+                asientos[asientoLibre] = true;
+                let nombre = prompt('Ingrese su nombre:');
+                let nuevaVentana = window.open('', '_blank');
+                nuevaVentana.document.write(`
+                    <h1>Tarjeta de Embarque</h1>
+                    <p>Nombre: ${nombre}</p>
+                    <p>Asiento: ${asientoLibre + 1} (${clase})</p>
+                `);
+            } else {
+                alert('Lo sentimos, no hay asientos disponibles en esta clase.');
+            }
+        }
+    </script>
+</body>
+
+</html>

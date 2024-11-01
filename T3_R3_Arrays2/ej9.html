@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function lanzarDados() {
+            let combinaciones = Array(6).fill().map(() => Array(6).fill(0)); 
+            let sumas = Array(13).fill(0);
+
+            
+            for (let i = 0; i < 36000; i++) {
+                let dado1 = Math.floor(Math.random() * 6) + 1;
+                let dado2 = Math.floor(Math.random() * 6) + 1;
+                let suma = dado1 + dado2;
+
+                sumas[suma]++; 
+                combinaciones[dado1 - 1][dado2 - 1]++;
+            }
+
+            console.log("Frecuencia de cada suma:");
+            for (let i = 2; i <= 12; i++) {
+                console.log("Suma ${i}: ${sumas[i]} veces");
+            }
+
+            console.log("<br>"+"Frecuencia de combinaciones (Dado 1 x Dado 2):");
+            combinaciones.forEach((fila, i) => {
+                console.log(`Dado 1 = ${i + 1}:`, fila.map((count, j) => "(D2=${j + 1}: ${count})").join(" "));
+            });
+        }
+        lanzarDados();
+    </script>
+</body>
+</html>

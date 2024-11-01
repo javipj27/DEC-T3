@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let clase = [
+            "Javier Perez, 20, 8, 7, 10",
+            "Raul Arroyo, 19, 8, 9, 6",
+            "Eduardo Camavinga, 21, 7, 6, 8",
+            "Aurelie Tchoumeni, 20, 9, 10, 10",
+            "Carlos Alcaraz, 22, 5, 6, 7"
+        ];
+
+        function aleatorio() {
+            let nAleatorio = Math.floor(Math.random() * clase.length);
+            let datos = clase[nAleatorio].split(", ");
+            return datos[0]; 
+        }
+        document.write("Estudiante aleatorio "+aleatorio());
+    </script>
+</body>
+</html>
