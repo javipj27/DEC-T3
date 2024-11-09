@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Apartado a
+            let persona = {
+                nombre: "Javier",
+                edad: 20,
+                mayorEdad: function() {
+                    return this.edad >= 18;
+                }
+            };
+        //Apartado b
+            function Persona(nombre, edad) {
+                this.nombre = nombre;
+                this.edad = edad;
+
+                this.mayorEdad = function() {
+                    return this.edad >= 18;
+                };
+            }
+        //Apartado c
+            let personas = [
+                new Persona("Lucas", 22),
+                new Persona("Marta", 23),
+                new Persona("Diego", 19)
+            ];
+        //Apartado d
+            function calcularEdadPromedio(personas) {
+                const totalEdades = personas.reduce((suma, persona) => suma + persona.edad, 0);
+                return totalEdades / personas.length;
+            }
+
+            const edadPromedio = calcularEdadPromedio(personas);
+            console.log(`La edad promedio del grupo es: ${edadPromedio}`);
+
+    </script>
+</body>
+</html>

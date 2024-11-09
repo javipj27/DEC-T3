@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nombres = ["Juanito", "Ana", "Jorge", "Pedro", "Javier", "Carlos"];
+
+        const conJ = nombres.filter(nombre => nombre.startsWith("J"));
+
+        const iniciales = conJ.map(nombre => 
+        nombre.split(" ").map(palabra => palabra[0]).join(""));
+
+        const ordenadas = iniciales.sort();
+
+        console.log("Iniciales ordenadas:" + ordenadas);
+
+    </script>
+</body>
+</html>

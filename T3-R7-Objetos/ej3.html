@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pA = new Punto(1, 2);
+        const pB = new Punto(4, 6);
+
+        const recta = new Recta(pA, pB);
+
+        console.log(`La recta tiene la longitud de: ${recta.longitud()}`);
+
+        console.log(`Punto 1: (${recta.p1.x}, ${recta.p1.y})`);
+        console.log(`Punto 2: (${recta.p2.x}, ${recta.p2.y})`);
+    </script>
+</body>
+</html>

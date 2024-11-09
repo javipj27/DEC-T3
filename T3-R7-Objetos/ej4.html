@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const casa1 = new Casa("Perez Jimenez", 12, 15706);
+        const casa2 = new Casa("Javier Boti", 30, 32004);
+        const casa3 = new Casa("MiniBoti", 13, 15705);
+
+        console.log(`El codigo postal de la casa 1 es: ${casa1.codigoPostal}`);
+        console.log(`La calle de la casa 3 es: ${casa3.calle}`);
+
+        casa1.setCalle("Larios");
+        casa2.setNumero(22);
+        casa3.setCodigoPostal(18329);
+
+        console.log(`La nueva calle de la casa 1 es: ${casa1.calle}`);
+        console.log(`El nuevo numero de la casa 2 es: ${casa2.numero}`);
+        console.log(`El nuevo codigo postal de la casa 3 es: ${casa3.codigoPostal}`);
+    </script>
+</body>
+</html>

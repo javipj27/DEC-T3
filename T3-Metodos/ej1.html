@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numeros = [1, 3, 6, 8, 9, 12, 17, 18];
+        const palabras = ["hola", "mundo", "que", "talis", "estamis", "yo", "esternocleidomastoideo"];
+        const numeros2 = [5, 10, 15, 20];
+
+        const masGrande = numeros.reduce((max, num) => (num > max ? num : max), numeros[0]);
+        console.log("Numero mas grande: "+ masGrande);
+
+        const pMasLarga = palabras.reduce((longest, palabra) => (palabra.length > longest.length ? palabra : longest), "");
+        console.log("Palabra mas larga: " + pMasLarga);
+
+        const pares = numeros.filter(num => num % 2 === 0);
+        console.log("Numeros pares: " + pares);
+
+        const impares = numeros.filter(num => num % 2 !== 0);
+        console.log("Numeros impares: "+ impares);
+
+        const palabraIs = palabras.filter(palabra => palabra.includes("is"));
+        console.log("Palabras con 'is':"+ palabraIs);
+
+        const divisiblesTres = numeros.every(num => num % 3 === 0);
+        console.log("Son divisibles por 3:" + divisiblesTres);
+
+        
+        const arrJuntos = numeros.map((num, index) => [num, numeros2[index]]);
+        console.log("2 arrays unidos: " + arrJuntos);
+
+        
+        const arrJuntosOrden = [...numeros, ...numeros2].sort((a, b) => a - b);
+        console.log("2 arrays unidos ordenados:" + arrJuntosOrden);
+
+        const sinPrimera = palabras.slice(1);
+        console.log("Array sin la primera palabra:" +sinPrimera);
+
+        const nPalabraInicio = ["Inicio", ...palabras];
+        console.log("Nueva palabra al inicio:" + nPalabraInicio);
+
+        const reemplazadas = [...palabras];
+        reemplazadas.splice(1, 2, "nuevas", "palabrillas","chachirulis"); 
+        console.log("Array con elementos reemplazado:" + reemplazadas);
+
+    </script>
+</body>
+</html>

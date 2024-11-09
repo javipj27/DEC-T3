@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>  
+    <script>
+        let fila = 0;
+        let columna = 0;
+        let pista;
+
+        let tesoroMapa = [
+          [34, 21, 32, 41, 25],
+          [14, 42, 43, 14, 31],
+          [54, 45, 52, 42, 23],
+          [33, 15, 51, 31, 35],
+          [21, 52, 33, 12, 23],
+        ];
+
+        while (true) {
+          pista = tesoroMapa[fila][columna];
+          console.log(`Posicion actual: fila ${fila + 1}, columna ${columna + 1} Pista: ${pista}`);
+
+          if (pista === (fila + 1) * 10 + (columna + 1)) {
+            console.log(`Tesoro encontrado en la posicion ${fila + 1}, ${columna + 1}`);
+            break;
+          }
+
+          let pistaStr = pista.toString();
+          fila = parseInt(pistaStr[0]) - 1;
+          columna = parseInt(pistaStr[1]) - 1;
+        }
+    </script>
+  </body>
+</html>
